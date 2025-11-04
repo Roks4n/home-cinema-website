@@ -19,13 +19,6 @@
 
 <!-- Manifest для PWA (если нужно) -->
 <link rel="manifest" href="/site.webmanifest">
-    <script>
-        var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-        link.type = 'image/x-icon';
-        link.rel = 'shortcut icon';
-        link.href = '/favicon.ico?v=' + new Date().getTime();
-        document.head.appendChild(link);
-    </script>
 </head>
 <body>
     <div id="container">
@@ -386,4 +379,5 @@
         </footer>
 </body>
 </html>
+
 
