@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашний кинотеатр Bowers & Wilkins 5.0 - Искусство звука</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Основные favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Для Apple устройств -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Для Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <script>
+        var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = '/favicon.ico?v=' + new Date().getTime();
+        document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <div id="container">
@@ -314,6 +332,12 @@
             </main>
         </div>
 
+        <!-- Круглая гиперссылка на внешний сайт -->
+        <a href="https://roks4n.github.io/autobiography/" class="floating-circle-link" id="floatingLink" target="_blank">
+            <span class="link-text">Автобиография</span>
+            <span class="link-arrow">→</span>
+        </a>
+
         <!-- Подвал -->
         <footer id="footer">
             <div class="footer-content">
@@ -340,9 +364,22 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Домашний кинотеатр Bowers & Wilkins 5.0 - Made by Roks4n // Espad</p>
+                <p>&copy; 2025 Домашний кинотеатр Bowers & Wilkins 5.0 - Made by Roks4n AKA Роман Кравец // Espad</p>
             </div>
+            <script>
+                // Скрипт для плавного появления/исчезания круглой ссылки
+                document.addEventListener('DOMContentLoaded', function() {
+                    const floatingLink = document.getElementById('floatingLink');
+
+                    window.addEventListener('scroll', function() {
+                        if (window.scrollY > 300) {
+                            floatingLink.classList.add('visible');
+                        } else {
+                            floatingLink.classList.remove('visible');
+                        }
+                    });
+                });
+            </script>
         </footer>
-    </div>
 </body>
 </html>
